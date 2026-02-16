@@ -30,15 +30,15 @@ submitBtn.addEventListener("click", function() {
 function convertCelsius(temperature, targetUnit) {
     // Se for Celsius -> Fahrenheit
     if (targetUnit === "F") {
-        return temperature * 1.8 + 32;
+        return `${temperature * 1.8 + 32} °F`;
     
     // Se for Celsius -> Kelvin
     } else if (targetUnit === "K") {
-        return temperature + 273;
+        return `${temperature + 273} K`;
     
     // Se for Celsius -> Celsius, retorne o mesmo valor
     } else {
-        return temperature;
+        return `${temperature} °C`;
 
     }
 }
@@ -46,15 +46,15 @@ function convertCelsius(temperature, targetUnit) {
 function convertFahrenheit(temperature, targetUnit) {
     // Se for Fahrenheit -> Celsius
     if (targetUnit === "C") {
-        return (temperature - 32) / 1.8;
+        return `${(temperature - 32) / 1.8} °C`;
     
     // Se for Fahrenheit -> Kelvin
     } else if (targetUnit === "K") {
-        return (temperature - 32) * (5 / 9) + 273;
+        return `${(temperature - 32) * (5 / 9) + 273} K`;
     
     // Se for Fahrenheit -> Fahrenheit, retorne o mesmo valor
     } else {
-        return temperature;
+        return `${temperature} °F`;
 
     }
 }
@@ -62,15 +62,15 @@ function convertFahrenheit(temperature, targetUnit) {
 function convertKelvin(temperature, targetUnit) {
     // Se for Kelvin -> Celsius
     if (targetUnit === "C") {
-        return temperature - 273;
+        return `${temperature - 273} °C`;
     
     // Se for Kelvin -> Fahrenheit
     } else if (targetUnit === "F") {
-        return (temperature - 273) * 1.8 + 32;
+        return `${(temperature - 273) * 1.8 + 32} °F`;
     
     // Se for Kelvin -> Kelvin, retorne o mesmo valor
     } else {
-        return temperature;
+        return `${temperature} K`;
 
     }
 }
