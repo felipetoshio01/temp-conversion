@@ -29,7 +29,7 @@ body {
     justify-content: center;
     padding: 0.5em;
 
-    height: 100vh;
+    min-height: 100vh;
     background-color: var(--primary-color);
 
     font-family: var(--text-font);
