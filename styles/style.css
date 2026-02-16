@@ -2,6 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
+/* =============== GLOBAIS =============== */
 * {
     margin: 0;
     padding: 0;
@@ -34,6 +35,9 @@ body {
     font-family: var(--text-font);
 }
 
+
+
+/* =============== MAIN =============== */
 main {
     background-color: white;
     padding: clamp(1em, 5%, 5em);
@@ -42,6 +46,7 @@ main {
     box-shadow: 4px 4px 10px 4px rgba(0, 0, 0, 0.5);
 }
 
+/* Título do conversor */
 h1 {
     padding: 1em;
 
@@ -50,12 +55,14 @@ h1 {
     color: var(--primary-dark-color);
 }
 
+/* ============ SELETOR DE TEMPERATURA ============ */
 #tempSelector {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* Input do usuário */
 #tempSelector > input {
     background-color: var(--unfocus-color);
 
@@ -75,6 +82,7 @@ h1 {
     background-color: white;
 }
 
+/* ============ SELETOR DE UNIDADE ============ */
 #unitSelector {
     display: flex;
     flex-flow: row wrap;
@@ -85,6 +93,7 @@ h1 {
     margin: clamp(0.5em, 5vw, 2em) 0;
 }
 
+/* Input do usuário */
 #unitSelector select {
     padding: 0.25em;
     cursor: pointer;
@@ -93,11 +102,13 @@ h1 {
     font-size: 0.9em;
 }
 
+/* Um wrapper para manter o label ao lado do select */
 .wrapper {
     display: flex;
     gap: 0.5em;
 }
- 
+
+/* ============ ÁREA DE ENVIO ============ */
 #submitArea {
     display: flex;
     justify-content: center;
@@ -105,6 +116,7 @@ h1 {
     margin: 1.5em 0;
 }
 
+/* Botão de envio */
 #submitBtn {
     background-color: var(--secondary-color);
     color: white;
@@ -125,6 +137,7 @@ h1 {
     background-color: var(--secondary-dark-color);
 }
 
+/* ============ ÁREA DE RESULTADO ============ */
 #result {
     font-weight: bold;
     font-size: 1.5em;
@@ -133,6 +146,9 @@ h1 {
     margin-bottom: 1.5em;
 }
 
+
+
+/* =============== FOOTER =============== */
 footer {
     position: relative;
     padding-top: 1em;
@@ -149,6 +165,7 @@ footer::after {
     translate: -50%;
 }
 
+/* Texto com os créditos */
 footer p {
     text-align: center;
     font-size: 0.9em;
@@ -156,6 +173,7 @@ footer p {
     margin-bottom: 0.5em;
 }
 
+/* Links */
 footer a {
     color: var(--secondary-color);
     font-weight: bold;
