@@ -6,6 +6,7 @@ const submitBtn = document.getElementById("submitBtn");  // Botão de envio
 const result = document.getElementById("result");  // Local onde se mostra o resultado
 
 
+// Retorna o resultado
 submitBtn.addEventListener("click", function() {
     let temperature = Number(temperatureInput.value); // Valor da temperatura para converter
     let selectedUnit = initialUnit.value; // Unidade especificada como inicial
@@ -26,51 +27,53 @@ submitBtn.addEventListener("click", function() {
     }
 })
 
-
+// Lógica para converter a unidade Celsius
 function convertCelsius(temperature, targetUnit) {
     // Se for Celsius -> Fahrenheit
     if (targetUnit === "F") {
-        return `${temperature * 1.8 + 32} °F`;
+        return `${(temperature * 1.8 + 32).toFixed(2)} °F`;
     
     // Se for Celsius -> Kelvin
     } else if (targetUnit === "K") {
-        return `${temperature + 273} K`;
+        return `${(temperature + 273).toFixed(2)} K`;
     
     // Se for Celsius -> Celsius, retorne o mesmo valor
     } else {
-        return `${temperature} °C`;
+        return `${(temperature).toFixed(2)} °C`;
 
     }
 }
 
+// Lógica para converter a unidade Fahrenheit
 function convertFahrenheit(temperature, targetUnit) {
     // Se for Fahrenheit -> Celsius
     if (targetUnit === "C") {
-        return `${(temperature - 32) / 1.8} °C`;
+        return `${((temperature - 32) / 1.8).toFixed(2)} °C`;
     
     // Se for Fahrenheit -> Kelvin
     } else if (targetUnit === "K") {
-        return `${(temperature - 32) * (5 / 9) + 273} K`;
+        return `${((temperature - 32) * (5 / 9) + 273).toFixed(2)} K`;
     
     // Se for Fahrenheit -> Fahrenheit, retorne o mesmo valor
     } else {
-        return `${temperature} °F`;
+        return `${(temperature).toFixed(2)} °F`;
 
     }
 }
 
+// Lógica para converter a unidade Kelvin
 function convertKelvin(temperature, targetUnit) {
     // Se for Kelvin -> Celsius
     if (targetUnit === "C") {
-        return `${temperature - 273} °C`;
+        return `${(temperature - 273).toFixed(2)} °C`;
     
     // Se for Kelvin -> Fahrenheit
     } else if (targetUnit === "F") {
-        return `${(temperature - 273) * 1.8 + 32} °F`;
+        return `${((temperature - 273) * 1.8 + 32).toFixed(2)} °F`;
     
     // Se for Kelvin -> Kelvin, retorne o mesmo valor
     } else {
-        return `${temperature} K`;
+        return `${(temperature).toFixed(2)} K`;
 
     }
 }
