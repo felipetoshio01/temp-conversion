@@ -1,9 +1,9 @@
 // ============ INPUTS ============ 
-const temperatureInput = document.getElementById("temperature");
-const initialUnit = document.getElementById("initialUnit");
-const finalUnit = document.getElementById("finalUnit"); 
-const submitBtn = document.getElementById("submitBtn");
-const result = document.getElementById("result")
+const temperatureInput = document.getElementById("temperature"); // Input numérico de temperatura
+const initialUnit = document.getElementById("initialUnit");  // Input com o seletor de unidades para converter
+const finalUnit = document.getElementById("finalUnit");   // Input que determina a unidade final
+const submitBtn = document.getElementById("submitBtn");  // Botão de envio
+const result = document.getElementById("result");  // Local onde se mostra o resultado
 
 
 submitBtn.addEventListener("click", function() {

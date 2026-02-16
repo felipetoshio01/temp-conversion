@@ -1,1 +1,89 @@
 @charset "UFT-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* =============== PALETA =============== */
+    --primary-color: #78C3EB;
+    --primary-dark-color: #2F5A70;
+    --secondary-color: #EB4D5B;
+    --secondary-dark-color: #99696D;
+
+    --unfocus-color: rgb(240, 240, 240);
+
+    /* =============== FONTES =============== */
+    --title-font: 'Comic Neue', cursive;
+    --text-font: 'Open Sans', Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5em;
+
+    height: 100vh;
+    background-color: var(--primary-color);
+
+    font-family: var(--text-font);
+}
+
+main {
+    background-color: white;
+    padding: clamp(1em, 5%, 5em);
+
+    border-radius: 1em;
+    box-shadow: 4px 4px 10px 4px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    padding: 0.75em;
+
+    font: normal bold 1.8em var(--title-font);
+    text-align: center;
+    color: var(--primary-dark-color);
+}
+
+#tempSelector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#tempSelector > input {
+    background-color: var(--unfocus-color);
+
+    height: 2.5em;
+    width: 70%;
+
+    border-radius: 0.5em;
+    border: 0.1em solid var(--primary-dark-color);
+    margin-bottom: 0.75em;
+
+    font-weight: bold;
+    font-size: 1em;
+    text-align: center;
+}
+
+#tempSelector > input:focus {
+    background-color: white;
+}
+
+#unitSelector {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 0.5em;
+    padding: 0.5em;
+    justify-content: center;
+}
+
+.wrapper {
+    display: flex;
+    gap: 0.5em;
+}

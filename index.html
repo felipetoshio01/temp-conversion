@@ -11,31 +11,38 @@
 
         <h1>Converta a temperatura!</h1>
 
+        <!-- Seletor de temperatura -->
         <div id="tempSelector">
-            <label for="temperature">Temperatura</label>
             <input type="number" name="temperature" id="temperature" placeholder="Escolha a temperatura">
         </div>
 
+        <!-- Seletores de unidades-->
         <div id="unitSelector">
-            <label for="initialUnit">De: </label>
-            <select name="initialUnit" id="initialUnit">
-                <option value="C">Celsius (°C)</option>
-                <option value="F">Fahrenheit (°F)</option>
-                <option value="K">Kelvin (K)</option>
-            </select>
+            <div class="wrapper">
+                <label for="initialUnit">De</label>
+                <select name="initialUnit" id="initialUnit">
+                    <option value="C">Celsius (°C)</option>
+                    <option value="F">Fahrenheit (°F)</option>
+                    <option value="K">Kelvin (K)</option>
+                </select>
+            </div>
 
-            <label for="finalUnit">Para: </label>
-            <select name="finalUnit" id="finalUnit">
-                <option value="C">Celsius (°C)</option>
-                <option value="F" selected="select">Fahrenheit (°F)</option>
-                <option value="K">Kelvin (K)</option>
-            </select>
+            <div class="wrapper">
+                <label for="finalUnit">para</label>
+                <select name="finalUnit" id="finalUnit">
+                    <option value="C">Celsius (°C)</option>
+                    <option value="F" selected="select">Fahrenheit (°F)</option>
+                    <option value="K">Kelvin (K)</option>
+                </select>
+            </div>
         </div>
 
+        <!-- Submit -->
         <div id="submitArea">
             <input type="button" value="Converter" id="submitBtn">
         </div>
 
+        <!-- Resultado -->
         <div id="result">
             Resultado aqui...
         </div>
